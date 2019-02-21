@@ -1,18 +1,41 @@
-<html lang="en">
-<head>
-    <meta charset="UTF8">
-    <title>Simple ToDo</title>
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-</head>
-<body>
-    <div class="container container--with-border">
-        <div class="row">
-            <div class="col-sm-12 col-md-8 col-md-offset-2">
-                <h3>Hello World</h3>
-            </div>
+<!doctype html>
+<html lang="pl">
+    <head>
+        <meta charset="utf-8">
+        <title>TODO</title>
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="css/styles.css">
+    </head>
+    <body>
+        <div class="todo-cnt">
+            <form class="todo-form" id="todoForm">
+                <div class="todo-form-row">
+                    <label class="todo-form-label" for="todoMessage">Podaj treść zadania</label>
+                    <textarea class="todo-form-message" name="todoMessage" id="todoMessage"></textarea>
+                </div>
+                <div class="todo-form-row">
+                    <button type="submit" class="button todo-form-button">Dodaj</button>
+                </div>
+            </form>
+
+            <section class="todo-list-cnt">
+                <header class="todo-list-header">
+                    <h2 class="todo-list-title">
+                        Lista zadań
+                    </h2>
+                    <form class="todo-list-search-form">
+                        <input type="search" id="todoSearch" class="todo-list-search">
+                    </form>
+                </header>
+
+                <div class="todo-list" id="todoList">
+                </div>
+            </section>
         </div>
-    </div>
-</body>
+
+        <script defer src="https://use.fontawesome.com/releases/v5.0.2/js/all.js"></script>
+        <script src="app/todo.js"></script>
+
+    </body>
 </html>
-
-
